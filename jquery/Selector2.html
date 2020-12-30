@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html></html>
+<head>
+    <title>01-2</title>
+    <script src="../resources/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.first:eq(0)').css("color","red");
+        });
+        $(function(){
+            $('.second:eq(0)').css("color","orange");
+        });
+        $(function(){
+            $('.first:eq(1)').css("color","yellow");
+        });
+        $(function(){
+            $('.third:first').css("color","green");
+        });
+        $(function(){
+            $('.second:last').css("color","blue");
+        });
+        $(function(){
+            $('.third:last').css("color","purple");
+        });
+    </script>
+</head>
+<body>
+    <ol>
+        <li class="first"><h2>1-1</h2></li>
+        <li class="second"><h2>1-2</h2></li>
+        <li class="first"><h2>1-3</h2></li>
+    </ol>
+    <ul>
+        <li class="third"><h2>2-1</h2></li>
+        <li class="second"><h2>2-2</h2></li>
+        <li class="third"><h2>2-3</h2></li>
+    </ul>
+</body>
+</html>
