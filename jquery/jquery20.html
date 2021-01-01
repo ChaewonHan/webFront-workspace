@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<title>Insert title here</title>
+<style>
+	div {
+		width:300px;
+		height:30px;
+		background:yellowgreen;
+		color:orangered;
+		border-radius:10px;
+		text-align:center;
+		border:1px solid green;
+		cursor:pointer;
+	}
+	p {
+		border:1px solid lightgray;
+		width:300px;
+		height:200px;
+		display:none;
+	}
+</style>
+</head>
+<body>
+	<h1>slide메소드</h1>
+	<h3>slideDown()과 slideUp()</h3>
+	<div>첫 번째 메뉴</div>
+	<p class="contents">내용</p>
+	<div>두 번째 메뉴</div>
+	<p class="contents">내용</p>
+	<div>세 번째 메뉴</div>
+	<p class="contents">내용</p>
+	<div>네 번째 메뉴</div>
+	<p class="contents">내용</p>
+	<div>다섯 번째 메뉴</div>
+	<p class="contents">내용</p>
+	<script>
+		$(function(){
+			$(".contents").slideUp();
+			
+			$('div').click(function(){
+				
+				//$(this).next("p").slideDown();
+				$(this).next("p").slideToggle(3000, function(){
+					alert('토글완료!');
+				});
+			});
+		});
+	</script>
+	
+	
+	
+	
+</body>
+	
+
+
+
+</html>

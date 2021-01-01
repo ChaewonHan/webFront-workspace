@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>시각적 효과</h1>
+	<h3>show()와 hide()</h3>
+	<p>문서 객체를 크게 하며 보여주거나 작게 하며 사라지게 한다</p>
+	<button id="show">보여주기</button>
+	<button id="hide">숨기기</button><br>
+	<img id="river" src="../image/river1.PNG">
+	<hr>
+	<script>
+		$(function(){
+			$("#show").click(function(){
+				$("#river").show();
+			});
+			$("#hide").click(function(){
+				$("#river").hide();
+			});
+		});
+		
+	</script>
+	
+	<br>
+	
+	<button id="toggle">토글하기</button>
+	<br>
+	<img id="forest" src="../image/forest1.PNG">
+	
+	<script>
+		$(function(){
+			/* var ctn = 0;
+			
+			$('#toggle').click(function(){
+				console.log(ctn);
+				ctn++;
+				if(ctn % 2 != 0){
+					$("#forest").hide();
+				}else{
+					$("#forest").show();
+				}
+			}); */
+			
+			 $('#toggle').click(function(){
+				//$('#forest').toggle();
+				 $('#forest').toggle(3000, function(){
+					 alert('토글완료')
+				 });
+			});
+			
+			
+		});
+	
+	</script>
+</body>
+</html>

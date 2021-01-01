@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<title>Insert title here</title>
+<style>
+	.test1 {
+		width:200px;
+		height:200px;
+		background:orangered;
+	}
+	.test2 {
+		width:50px;
+		height:50px;
+		background:orange;
+	}
+</style>
+</head>
+<body>
+	<h1>Effect메소드</h1>
+	<p>페이지에 애니메이션 효과를 만들기 위한 메소드 집합</p>
+	<h3>animate() 메소드</h3>
+	<div id="test1" class="test1"></div>
+	<button id="btn1">animation 적용</button>
+	<script>
+		$(function(){
+			$("#btn1").click(function(){
+				$("#test1").animate({width:"500px",background:"blue"}, 3000, function(){
+						alert("애니메이션 적용 완료!");
+				});
+				
+			});
+		});
+	</script>
+	
+</body>
+</html>
