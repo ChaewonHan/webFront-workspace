@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>          
+    
+</head>
+<body>
+    <p>
+        색상을 선택하세요
+        <button>Red</button>
+        <button>Orange</button>
+        <button>yellow</button>
+        <button>green</button>
+        <button>blue</button>
+    </p>
+    <div id="color">
+    </div>
+    <script>
+        window.onload = function(){
+            btn = document.getElementsbyTagName('button');
+            for(var i=0; i<btn.length; i++){
+                    btn[i].addEventListener('click', function(){
+                    color = document.getElementById("color");
+                    color.style.width = "100px";
+                    color.style.height = "100px";
+                    color.style.backgroundColor = this.innerText;
+                });
+            }
+        }
+    </script>
+</body>
+</html>
